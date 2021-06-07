@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import FirstPage from './HomePages/FirstPage.js';
 import LoginPage from './HomePages/LoginPage.js';
@@ -7,6 +7,14 @@ import RegisterPage from './HomePages/RegisterPage.js';
 export default function App() {
   const [showLoginPage, setShowLoginPage] = useState(false);
   const [showRegisterPage, setShowRegisterPage] = useState(false);
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() =>{
+    fetch('https://opentdb.com/api.php?amount=20')
+    .then((res) => res.json())
+    .then((data) =>setQuestions(data.results))
+    .catch((err) => {console.log(err.message)});
+  }, []);
 
   function handleOnClick (){
     setShowLoginPage(false);
@@ -25,13 +33,13 @@ export default function App() {
     <div>
       <div>
         {!showLoginPage && !showRegisterPage &&
-          <FirstPage LoginOnClick={handleLoginOnClick} RegisterOnClick={handleRegisterOnClick}/>
+          <FirstPage LoginOnClick={handleLoginOnClick} RegisterOnClick={handleRegisterOnClick} questions={questions}/>
         }
       </div>
 
       <div>
         {showLoginPage && !showRegisterPage &&
-          <LoginPage handleOnClick={handleOnClick}/>
+          <LoginPage handleOnClick={handleOnClick} />
         }
       </div>
 

@@ -2,10 +2,11 @@ import './FirstPage.css';
 import auth, {provider} from '../Firebase/auth.js';
 import { useState } from 'react';
 
-import Game from '../GamePages/GamePage.js';
+import AfterLoginPage from '../GamePages/AfterLoginPage.js';
 
 export default function FirstPage(props){
   const [user, setUser] = useState(null);
+  const questions = props.questions;
 
   function handleLoginWithGoogle (){
     auth()
@@ -28,7 +29,7 @@ export default function FirstPage(props){
     </div>
 
     <div>
-      {user && <Game user={user.displayName}/>}
+      {user && <AfterLoginPage user={user.displayName} questions={questions}/>}
     </div>
     </>
   )
