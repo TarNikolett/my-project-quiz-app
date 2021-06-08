@@ -14,11 +14,21 @@
   grid-template-rows: repeat(2, 80px);
 }
 
-.answer-button{
-  background-color: whitesmoke;
-  margin: 10px;
+.answers-button{
   background-color: #e1e4e4;
+  margin: 10px;
   font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+.correct{
+  background-color: green;
+}
+.wrong{
+  background-color: red;
+}
+.answers-button:hover{
+  background-color: #cbcfcfd0;
 }
 
 .next-button-div{
@@ -28,7 +38,15 @@
 
 .next-button {
   background-color: #7aee71;
-  width: 100px;
+  width: 150px;
   height: 50px;
   margin: 10px;
+  text-transform: uppercase;
+}
+
+.header-div{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
 }

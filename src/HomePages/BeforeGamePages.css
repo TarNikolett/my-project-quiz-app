@@ -39,6 +39,11 @@ button {
   border: none;
   border-radius: 20px;
   background-color: #7aee71;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #4de942;
 }
 
 a {
