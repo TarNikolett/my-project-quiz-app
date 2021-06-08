@@ -12,9 +12,9 @@ export default function AfterLoginPage (props){
 
   return (
     <>
-    {!isClicked ? <div>
+    {!isClicked ? <div className="container">
       <h1>Üdvözöllek a játékban {props.user}!</h1>
-      <button onClick={handleOnclick}>Start</button>
+      <button onClick={handleOnclick} className="start-btn">Start</button>
       </div> : null}
 
     {isClicked ? <Game questions={questions}/> : null}

@@ -1,25 +1,11 @@
-body{
-  background-color: rgb(152, 90, 211);
-}
-
-.game-container {
-  border-radius: 50px;
-  margin: 200px auto;
-  padding: 50px;
-  width: 690px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .question-div {
-  background-color: whitesmoke;
   width: 100%;
   text-align: center;
   padding: 25px;
   border-radius: 20px;
+  background-color: #e1e4e4;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .answer-div{
@@ -31,6 +17,8 @@ body{
 .answer-button{
   background-color: whitesmoke;
   margin: 10px;
+  background-color: #e1e4e4;
+  font-size: 20px;
 }
 
 .next-button-div{
@@ -39,6 +27,7 @@ body{
 }
 
 .next-button {
+  background-color: #7aee71;
   width: 100px;
   height: 50px;
   margin: 10px;

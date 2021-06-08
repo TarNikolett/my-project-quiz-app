@@ -1,4 +1,4 @@
-import './FirstPage.css';
+import './BeforeGamePages.css';
 import auth, {provider} from '../Firebase/auth.js';
 import { useState } from 'react';
 
